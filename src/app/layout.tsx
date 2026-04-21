@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     description:
       "You bring the expertise. We build the automation. You keep the majority — forever.",
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
   robots: { index: true, follow: true },
 };
 
