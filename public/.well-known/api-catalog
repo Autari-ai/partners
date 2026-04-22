@@ -10,6 +10,10 @@
       ],
       "describedby": [
         {
+          "href": "https://partners.autari.co.uk/.well-known/agent-card.json",
+          "type": "application/json"
+        },
+        {
           "href": "https://partners.autari.co.uk/.well-known/mcp/server-card.json",
           "type": "application/json"
         },

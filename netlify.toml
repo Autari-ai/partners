@@ -9,7 +9,7 @@
 [[headers]]
   for = "/"
   [headers.values]
-    Link = '''</.well-known/api-catalog>; rel="api-catalog", </sitemap.xml>; rel="sitemap", </.well-known/mcp/server-card.json>; rel="describedby", </.well-known/agent-skills/index.json>; rel="describedby"'''
+    Link = '''</.well-known/api-catalog>; rel="api-catalog", </sitemap.xml>; rel="sitemap", </.well-known/agent-card.json>; rel="agent-card", </.well-known/mcp/server-card.json>; rel="describedby", </.well-known/agent-skills/index.json>; rel="describedby"'''
     Vary = "Accept"
 
 # API catalog — application/linkset+json (RFC 9727)
@@ -22,6 +22,12 @@
 # MCP server card — CORS for cross-origin agent access
 [[headers]]
   for = "/.well-known/mcp/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+# A2A Agent Card — CORS for agent-to-agent discovery
+[[headers]]
+  for = "/.well-known/agent-card.json"
   [headers.values]
     Access-Control-Allow-Origin = "*"
 

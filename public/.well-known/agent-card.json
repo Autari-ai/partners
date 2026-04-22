@@ -1,0 +1,54 @@
+{
+  "id": "autari-partners",
+  "version": "0.1.0",
+  "name": "Autari Partner Programme",
+  "description": "Discover information about the Autari automation partnership programme, including earning model, benefits, FAQ, and how to submit a partner application.",
+  "provider": {
+    "organization": "Autari",
+    "url": "https://partners.autari.co.uk"
+  },
+  "endpoint": "https://partners.autari.co.uk/",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "interfaces": [
+    {
+      "type": "http-rest",
+      "url": "https://partners.autari.co.uk/"
+    }
+  ],
+  "skills": [
+    {
+      "id": "partnership-info",
+      "name": "Get Partnership Information",
+      "description": "Retrieve structured information about the Autari partner programme including how it works, earning model (one-time setup fee, recurring subscription revenue, B2C royalties), and benefits.",
+      "inputModes": ["text/plain"],
+      "outputModes": ["application/json", "text/markdown"]
+    },
+    {
+      "id": "get-faq",
+      "name": "Get FAQ",
+      "description": "Retrieve frequently asked questions and answers about partnering with Autari, including costs, technical requirements, earning potential, and client ownership.",
+      "inputModes": ["text/plain"],
+      "outputModes": ["application/json", "text/markdown"]
+    },
+    {
+      "id": "partner-application",
+      "name": "Partner Application",
+      "description": "Submit a partner application with name, email, area of expertise, and optional fields (phone, company, message). Applications are reviewed within 48 hours.",
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    }
+  ],
+  "metadata": {
+    "contentSignals": {
+      "ai-train": "no",
+      "search": "yes",
+      "ai-input": "yes"
+    },
+    "agentSkillsIndex": "https://partners.autari.co.uk/.well-known/agent-skills/index.json",
+    "mcpServerCard": "https://partners.autari.co.uk/.well-known/mcp/server-card.json"
+  }
+}
