@@ -1,0 +1,23 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://partners.autari.co.uk/",
+      "service-doc": [
+        {
+          "href": "https://partners.autari.co.uk/",
+          "type": "text/html"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://partners.autari.co.uk/.well-known/mcp/server-card.json",
+          "type": "application/json"
+        },
+        {
+          "href": "https://partners.autari.co.uk/.well-known/agent-skills/index.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

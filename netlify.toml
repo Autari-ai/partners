@@ -4,3 +4,40 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Link response headers for agent discovery (RFC 8288, RFC 9727)
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = '''</.well-known/api-catalog>; rel="api-catalog", </sitemap.xml>; rel="sitemap", </.well-known/mcp/server-card.json>; rel="describedby", </.well-known/agent-skills/index.json>; rel="describedby"'''
+    Vary = "Accept"
+
+# API catalog — application/linkset+json (RFC 9727)
+[[headers]]
+  for = "/.well-known/api-catalog"
+  [headers.values]
+    Content-Type = "application/linkset+json"
+    Access-Control-Allow-Origin = "*"
+
+# MCP server card — CORS for cross-origin agent access
+[[headers]]
+  for = "/.well-known/mcp/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+# Agent skills — CORS for cross-origin agent access
+[[headers]]
+  for = "/.well-known/agent-skills/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+# Markdown content file — proper Content-Type
+[[headers]]
+  for = "/content.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+
+# Edge function for Accept: text/markdown content negotiation
+[[edge_functions]]
+  function = "markdown-negotiation"
+  path = "/"

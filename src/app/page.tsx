@@ -6,6 +6,7 @@ import Benefits from "@/components/sections/Benefits";
 import PartnerForm from "@/components/sections/PartnerForm";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/layout/Footer";
+import WebMCP from "@/components/WebMCP";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <FAQ />
       </main>
       <Footer />
+      <WebMCP />
     </>
   );
 }

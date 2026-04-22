@@ -1,0 +1,45 @@
+# https://partners.autari.co.uk — Autari Partner Programme
+# RFC 9309 compliant
+
+User-agent: *
+Allow: /
+Disallow: /_next/
+
+# AI Search Crawlers — allowed to index for search results
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Content Signals — https://contentsignals.org/
+# ai-train: do not use content for model training
+# search: allow indexing for search results
+# ai-input: allow agents to read and interact with content
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+Sitemap: https://partners.autari.co.uk/sitemap.xml

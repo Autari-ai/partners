@@ -1,0 +1,27 @@
+{
+  "serverInfo": {
+    "name": "autari-partners",
+    "version": "0.1.0",
+    "description": "Autari Partner Programme — automation partnership opportunities and partner applications"
+  },
+  "transport": {
+    "type": "webmcp",
+    "url": "https://partners.autari.co.uk/"
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "get_partnership_details",
+        "description": "Get structured information about the Autari partner programme including how it works, the earning model, and benefits"
+      },
+      {
+        "name": "get_faq",
+        "description": "Get frequently asked questions and answers about partnering with Autari"
+      },
+      {
+        "name": "navigate_to_application",
+        "description": "Navigate to the partner application form on the page"
+      }
+    ]
+  }
+}
