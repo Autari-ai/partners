@@ -13,7 +13,7 @@
     "pushNotifications": false,
     "extendedAgentCard": false
   },
-  "interfaces": [
+  "supportedInterfaces": [
     {
       "type": "http-rest",
       "url": "https://partners.autari.co.uk/"
